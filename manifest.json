@@ -1,0 +1,82 @@
+{
+    "name": "ERA5 Data Connector",
+    "container": "era5input-connector",
+    "pre_processing_stage": "python3 create_connector_yml.py",
+    "execution_stage": "./main.sh",
+    "slurm_input_rules": {
+   
+           "time": {
+                "max": 2,
+                "min": 1,
+                "default_value": 1,
+                "step": 1,
+                "unit": "Hours"   
+            },
+            "memory_per_cpu": {
+                "max": 1000,
+                "min": 200,
+                "default_value": 400,
+                "step": 200,
+                "unit": "MB"
+            }
+    },
+    "param_rules": {
+        "dataset": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "insitu-gridded-observations-global-and-regional"
+        },
+        "format": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "zip"
+        },
+        "region": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "conus"
+        },
+        "origin": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "cpc_conus"
+        },
+        "variable": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "precipitation"
+        },
+        "time_aggregation": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "daily"
+        },
+        "horizontal_aggregation": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "0_25_x_0_25"
+        },
+        "year": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "1972,1976,1980"
+        },
+        "version": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "v1.0"
+        },
+        "uid": {
+            "type": "string_input",
+            "require": true,
+            "default_value": ""
+        },
+        "api_key": {
+            "type": "string_input",
+            "require": true,
+            "default_value": ""
+        }
+    },
+    "supported_hpc": ["expanse_community"],
+    "default_hpc": "expanse_community"
+}
