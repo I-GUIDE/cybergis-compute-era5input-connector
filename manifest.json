@@ -77,6 +77,6 @@
             "default_value": ""
         }
     },
-    "supported_hpc": ["expanse_community"],
-    "default_hpc": "expanse_community"
+    "supported_hpc": ["anvil_community"],
+    "default_hpc": "anvil_community"
 }
