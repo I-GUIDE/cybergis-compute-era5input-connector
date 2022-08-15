@@ -69,12 +69,12 @@
         "uid": {
             "type": "string_input",
             "require": true,
-            "default_value": ""
+            "default_value": "CHANGE ME"
         },
         "api_key": {
             "type": "string_input",
             "require": true,
-            "default_value": ""
+            "default_value": "CHANGE ME"
         }
     },
     "supported_hpc": ["anvil_community"],
