@@ -16,5 +16,5 @@ connector_dict = {'$1': {'Input': {'Era5Input':
                                       'uid':os.environ['param_uid'],
                                       'api_key':os.environ['param_api_key']}}}}
 
-with open('/job/data/era5input.yml','w') as damfile:
-    yaml.dump(connector_dict,damfile)
+with open('/job/executable/era5input.yml','w') as era5file:
+    yaml.dump(connector_dict,era5file)
