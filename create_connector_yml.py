@@ -11,7 +11,8 @@ connector_dict = {'$1': {'Input': {'Era5Input':
                                       'variable': os.environ['param_variable'],
                                       'time_aggregation': os.environ['param_time_aggregation'],
                                       'horizontal_aggregation': os.environ['param_horizontal_aggregation'],
-                                      'year': os.environ['param_year'].split(','),
+                                      'start_year': os.environ['param_start_year'],
+                                      'end_year': os.environ['param_end_year'],
                                       'version': os.environ['param_version'],
                                       'uid':os.environ['param_uid'],
                                       'api_key':os.environ['param_api_key']}}}}
