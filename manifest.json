@@ -56,10 +56,15 @@
             "require": true,
             "default_value": "0_25_x_0_25"
         },
-        "year": {
+        "start_year": {
             "type": "string_input",
             "require": true,
-            "default_value": "1972,1976,1980"
+            "default_value": "1950"
+        },
+        "end_year": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "2021"
         },
         "version": {
             "type": "string_input",
